@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/camera-apple-touch.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/camera_x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/camera_x16.png">
+  <title>InstaBlam image editor</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400;1,700&family=Raleway:ital,wght@1,200;1,300&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav class="header flex">
+    <a class="about montserrat" href="about.html">About InstaBlam</a>
+    <img class="logo" src="images/icons/camera_x512.png" alt="InstaBlam Logo">
+  </nav>
+  <main>
+    <section class="flex wrapper">
+      <video class="camera"></video>
+      <button class="screenShot montserrat" type="button">Blam me!</button>
+      <img src="" class="hidden" id="photo" data-caman-hidpi-disabled />
+    </section>
+    <form id="settings" class="sliderWrapper hidden">
+      <div class="sliderContainer flex">
+        <input type="range" min="-100" max="100" value="0" step="1" class="slider" data-filter="brightness">
+        <h5 class="raleway">Brightness: <span class="montserrat" id="brightnessvalue">0</span></h5>
+      </div>
+      <div class="sliderContainer flex">
+        <input type="range" min="-100" max="100" value="0" step="1" class="slider" data-filter="contrast">
+        <h5 class="raleway">Contrast: <span class="montserrat" id="contrastvalue">0</span></h5>
+      </div>
+      <div class="sliderContainer flex">
+        <input type="range" min="-100" max="100" value="0" step="1" class="slider" data-filter="saturation">
+        <h5 class="raleway">Saturation: <span class="montserrat" id="saturationvalue">0</span></h5>
+      </div>
+      <div class="sliderContainer flex">
+        <input type="range" min="0" max="5" value="1" step="0.1" class="slider" data-filter="gamma">
+        <h5 class="raleway">Gamma: <span class="montserrat" id="gammavalue">1</span></h5>
+      </div>
+      <div class="sliderContainer flex">
+        <input type="range" min="0" max="100" value="0" step="1" class="slider" data-filter="hue">
+        <h5 class="raleway">Hue: <span class="montserrat" id="huevalue">0</span></h5>
+      </div>
+      <div class="sliderContainer flex">
+        <input type="range" min="0" max="100" value="0" step="1" class="slider" data-filter="sepia">
+        <h5 class="raleway">Sepia: <span class="montserrat" id="sepiavalue">0</span></h5>
+      </div>
+    </form>
+    <section class="downloadWrapper flex hidden">
+      <button class="montserrat" id="reset">Reset filters</button>
+      <button class="montserrat" id="dwnldBtn"><a id="download" download>Download
+          picture</a></button>
+    </section>
+  </main>
+  <article class="pushWrapper flex">
+    <h6 id="subText" class="small subInfo raleway">Get notifications from us</h6>
+    <button class="montserrat" id="subScribe">Here</button>
+  </article>
+  <script type="module" src="js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
+</body>
+
+</html>
