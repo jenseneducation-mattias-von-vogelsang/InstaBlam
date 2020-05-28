@@ -78,8 +78,8 @@ function updateSliderValues() {
     //get slidervalue
     let value = slider.value;
     //display slidervalues
-    const changeValue = `#${filter}value`;
-    document.querySelector(changeValue).innerHTML = value;
+    const domSearch = `#${filter}value`;
+    document.querySelector(domSearch).innerHTML = value;
   });
 }
 
@@ -148,8 +148,8 @@ sliders.forEach((slider) => {
     let setting = '(' + value + ')'
     filters[filter] = setting;
     //display slidervalues
-    const changeValue = `#${filter}value`;
-    document.querySelector(changeValue).innerHTML = value;
+    const domSearch = `#${filter}value`;
+    document.querySelector(domSearch).innerHTML = value;
     applyFilters();
   }
 });
